@@ -8,72 +8,98 @@ jobs:
     vmImage: $(VMIMAGE)
   strategy:
     matrix:
-      ? osx_64_channel_targetsconda-forge_maincross_target_platformosx-64rust_archx86_64-apple-darwinrust_arch_envX86_64_APPLE_DARWINrust_default_ccx86_64-apple-darwin13.4.0_h0325f322
-      : CONFIG: osx_64_channel_targetsconda-forge_maincross_target_platformosx-64rust_archx86_64-apple-darwinrust_arch_envX86_64_APPLE_DARWINrust_default_ccx86_64-apple-darwin13.4.0_h0325f322
+      ? osx_64_channel_targetsconda-forge_maincross_target_platformosx-64rust_archx86_64-apple-darwinrust_arch_envX86_64_APPLE_DARWINrust_default_ccx86_64-apple-darwin13.4.0_h5a2078a4
+      : CONFIG: osx_64_channel_targetsconda-forge_maincross_target_platformosx-64rust_archx86_64-apple-darwinrust_arch_envX86_64_APPLE_DARWINrust_default_ccx86_64-apple-darwin13.4.0_h5a2078a4
         UPLOAD_PACKAGES: 'True'
         VMIMAGE: macOS-15
+        build_workspace_dir: ~/miniforge3/conda-bld
         store_build_artifacts: false
-      ? osx_64_channel_targetsconda-forge_maincross_target_platformosx-arm64rust_archaarch64-apple-darwinrust_arch_envAARCH64_APPLE_DARWINrust_default_ccarm64-apple-darwin20_h49b2348e
-      : CONFIG: osx_64_channel_targetsconda-forge_maincross_target_platformosx-arm64rust_archaarch64-apple-darwinrust_arch_envAARCH64_APPLE_DARWINrust_default_ccarm64-apple-darwin20_h49b2348e
+        tools_install_dir: ~/miniforge3
+      ? osx_64_channel_targetsconda-forge_maincross_target_platformosx-arm64rust_archaarch64-apple-darwinrust_arch_envAARCH64_APPLE_DARWINrust_default_ccarm64-apple-darwin20_h2e996779
+      : CONFIG: osx_64_channel_targetsconda-forge_maincross_target_platformosx-arm64rust_archaarch64-apple-darwinrust_arch_envAARCH64_APPLE_DARWINrust_default_ccarm64-apple-darwin20_h2e996779
         UPLOAD_PACKAGES: 'True'
         VMIMAGE: macOS-15
+        build_workspace_dir: ~/miniforge3/conda-bld
         store_build_artifacts: false
-      ? osx_64_channel_targetsconda-forge_maincross_target_platformwin-64rust_archx86_64-pc-windows-msvcrust_arch_envX86_64_PC_WINDOWS_MSVCrust_default_ccclang-clversion1.95.0
-      : CONFIG: osx_64_channel_targetsconda-forge_maincross_target_platformwin-64rust_archx86_64-pc-windows-msvcrust_arch_envX86_64_PC_WINDOWS_MSVCrust_default_ccclang-clversion1.95.0
+        tools_install_dir: ~/miniforge3
+      ? osx_64_channel_targetsconda-forge_maincross_target_platformwin-64rust_archx86_64-pc-windows-msvcrust_arch_envX86_64_PC_WINDOWS_MSVCrust_default_ccclang-clversion1.96.0
+      : CONFIG: osx_64_channel_targetsconda-forge_maincross_target_platformwin-64rust_archx86_64-pc-windows-msvcrust_arch_envX86_64_PC_WINDOWS_MSVCrust_default_ccclang-clversion1.96.0
         UPLOAD_PACKAGES: 'True'
         VMIMAGE: macOS-15
+        build_workspace_dir: ~/miniforge3/conda-bld
         store_build_artifacts: false
-      ? osx_64_channel_targetsconda-forge_rust_devcross_target_platformosx-64rust_archx86_64-apple-darwinrust_arch_envX86_64_APPLE_DARWINrust_default_ccx86_64-apple-darwin13_h86400dd5
-      : CONFIG: osx_64_channel_targetsconda-forge_rust_devcross_target_platformosx-64rust_archx86_64-apple-darwinrust_arch_envX86_64_APPLE_DARWINrust_default_ccx86_64-apple-darwin13_h86400dd5
+        tools_install_dir: ~/miniforge3
+      ? osx_64_channel_targetsconda-forge_rust_devcross_target_platformosx-64rust_archx86_64-apple-darwinrust_arch_envX86_64_APPLE_DARWINrust_default_ccx86_64-apple-darwin13_h602b3f2a
+      : CONFIG: osx_64_channel_targetsconda-forge_rust_devcross_target_platformosx-64rust_archx86_64-apple-darwinrust_arch_envX86_64_APPLE_DARWINrust_default_ccx86_64-apple-darwin13_h602b3f2a
         UPLOAD_PACKAGES: 'True'
         VMIMAGE: macOS-15
+        build_workspace_dir: ~/miniforge3/conda-bld
         store_build_artifacts: false
-      ? osx_64_channel_targetsconda-forge_rust_devcross_target_platformosx-arm64rust_archaarch64-apple-darwinrust_arch_envAARCH64_APPLE_DARWINrust_default_ccarm64-apple-darw_ha9ae9425
-      : CONFIG: osx_64_channel_targetsconda-forge_rust_devcross_target_platformosx-arm64rust_archaarch64-apple-darwinrust_arch_envAARCH64_APPLE_DARWINrust_default_ccarm64-apple-darw_ha9ae9425
+        tools_install_dir: ~/miniforge3
+      ? osx_64_channel_targetsconda-forge_rust_devcross_target_platformosx-arm64rust_archaarch64-apple-darwinrust_arch_envAARCH64_APPLE_DARWINrust_default_ccarm64-apple-darw_he58be280
+      : CONFIG: osx_64_channel_targetsconda-forge_rust_devcross_target_platformosx-arm64rust_archaarch64-apple-darwinrust_arch_envAARCH64_APPLE_DARWINrust_default_ccarm64-apple-darw_he58be280
         UPLOAD_PACKAGES: 'True'
         VMIMAGE: macOS-15
+        build_workspace_dir: ~/miniforge3/conda-bld
         store_build_artifacts: false
-      ? osx_64_channel_targetsconda-forge_rust_devcross_target_platformwin-64rust_archx86_64-pc-windows-msvcrust_arch_envX86_64_PC_WINDOWS_MSVCrust_default_ccclang-clversion1.97.0
-      : CONFIG: osx_64_channel_targetsconda-forge_rust_devcross_target_platformwin-64rust_archx86_64-pc-windows-msvcrust_arch_envX86_64_PC_WINDOWS_MSVCrust_default_ccclang-clversion1.97.0
+        tools_install_dir: ~/miniforge3
+      ? osx_64_channel_targetsconda-forge_rust_devcross_target_platformwin-64rust_archx86_64-pc-windows-msvcrust_arch_envX86_64_PC_WINDOWS_MSVCrust_default_ccclang-clversion1.98.0
+      : CONFIG: osx_64_channel_targetsconda-forge_rust_devcross_target_platformwin-64rust_archx86_64-pc-windows-msvcrust_arch_envX86_64_PC_WINDOWS_MSVCrust_default_ccclang-clversion1.98.0
         UPLOAD_PACKAGES: 'True'
         VMIMAGE: macOS-15
+        build_workspace_dir: ~/miniforge3/conda-bld
         store_build_artifacts: false
-      ? osx_arm64_channel_targetsconda-forge_maincross_target_platformosx-64rust_archx86_64-apple-darwinrust_arch_envX86_64_APPLE_DARWINrust_default_ccx86_64-apple-darwin13._h1ab0c3d4
-      : CONFIG: osx_arm64_channel_targetsconda-forge_maincross_target_platformosx-64rust_archx86_64-apple-darwinrust_arch_envX86_64_APPLE_DARWINrust_default_ccx86_64-apple-darwin13._h1ab0c3d4
+        tools_install_dir: ~/miniforge3
+      ? osx_arm64_channel_targetsconda-forge_maincross_target_platformosx-64rust_archx86_64-apple-darwinrust_arch_envX86_64_APPLE_DARWINrust_default_ccx86_64-apple-darwin13._ha26227d1
+      : CONFIG: osx_arm64_channel_targetsconda-forge_maincross_target_platformosx-64rust_archx86_64-apple-darwinrust_arch_envX86_64_APPLE_DARWINrust_default_ccx86_64-apple-darwin13._ha26227d1
         UPLOAD_PACKAGES: 'True'
         VMIMAGE: macOS-15
+        build_workspace_dir: ~/miniforge3/conda-bld
         store_build_artifacts: false
-      ? osx_arm64_channel_targetsconda-forge_maincross_target_platformosx-arm64rust_archaarch64-apple-darwinrust_arch_envAARCH64_APPLE_DARWINrust_default_ccarm64-apple-darwi_h24dcc34e
-      : CONFIG: osx_arm64_channel_targetsconda-forge_maincross_target_platformosx-arm64rust_archaarch64-apple-darwinrust_arch_envAARCH64_APPLE_DARWINrust_default_ccarm64-apple-darwi_h24dcc34e
+        tools_install_dir: ~/miniforge3
+      ? osx_arm64_channel_targetsconda-forge_maincross_target_platformosx-arm64rust_archaarch64-apple-darwinrust_arch_envAARCH64_APPLE_DARWINrust_default_ccarm64-apple-darwi_h603a0179
+      : CONFIG: osx_arm64_channel_targetsconda-forge_maincross_target_platformosx-arm64rust_archaarch64-apple-darwinrust_arch_envAARCH64_APPLE_DARWINrust_default_ccarm64-apple-darwi_h603a0179
         UPLOAD_PACKAGES: 'True'
         VMIMAGE: macOS-15
+        build_workspace_dir: ~/miniforge3/conda-bld
         store_build_artifacts: false
-      ? osx_arm64_channel_targetsconda-forge_maincross_target_platformwin-64rust_archx86_64-pc-windows-msvcrust_arch_envX86_64_PC_WINDOWS_MSVCrust_default_ccclang-clversion1.95.0
-      : CONFIG: osx_arm64_channel_targetsconda-forge_maincross_target_platformwin-64rust_archx86_64-pc-windows-msvcrust_arch_envX86_64_PC_WINDOWS_MSVCrust_default_ccclang-clversion1.95.0
+        tools_install_dir: ~/miniforge3
+      ? osx_arm64_channel_targetsconda-forge_maincross_target_platformwin-64rust_archx86_64-pc-windows-msvcrust_arch_envX86_64_PC_WINDOWS_MSVCrust_default_ccclang-clversion1.96.0
+      : CONFIG: osx_arm64_channel_targetsconda-forge_maincross_target_platformwin-64rust_archx86_64-pc-windows-msvcrust_arch_envX86_64_PC_WINDOWS_MSVCrust_default_ccclang-clversion1.96.0
         UPLOAD_PACKAGES: 'True'
         VMIMAGE: macOS-15
+        build_workspace_dir: ~/miniforge3/conda-bld
         store_build_artifacts: false
-      ? osx_arm64_channel_targetsconda-forge_rust_devcross_target_platformosx-64rust_archx86_64-apple-darwinrust_arch_envX86_64_APPLE_DARWINrust_default_ccx86_64-apple-darwi_h61879d76
-      : CONFIG: osx_arm64_channel_targetsconda-forge_rust_devcross_target_platformosx-64rust_archx86_64-apple-darwinrust_arch_envX86_64_APPLE_DARWINrust_default_ccx86_64-apple-darwi_h61879d76
+        tools_install_dir: ~/miniforge3
+      ? osx_arm64_channel_targetsconda-forge_rust_devcross_target_platformosx-64rust_archx86_64-apple-darwinrust_arch_envX86_64_APPLE_DARWINrust_default_ccx86_64-apple-darwi_h67306843
+      : CONFIG: osx_arm64_channel_targetsconda-forge_rust_devcross_target_platformosx-64rust_archx86_64-apple-darwinrust_arch_envX86_64_APPLE_DARWINrust_default_ccx86_64-apple-darwi_h67306843
         UPLOAD_PACKAGES: 'True'
         VMIMAGE: macOS-15
+        build_workspace_dir: ~/miniforge3/conda-bld
         store_build_artifacts: false
-      ? osx_arm64_channel_targetsconda-forge_rust_devcross_target_platformosx-arm64rust_archaarch64-apple-darwinrust_arch_envAARCH64_APPLE_DARWINrust_default_ccarm64-apple-d_h7e963ae7
-      : CONFIG: osx_arm64_channel_targetsconda-forge_rust_devcross_target_platformosx-arm64rust_archaarch64-apple-darwinrust_arch_envAARCH64_APPLE_DARWINrust_default_ccarm64-apple-d_h7e963ae7
+        tools_install_dir: ~/miniforge3
+      ? osx_arm64_channel_targetsconda-forge_rust_devcross_target_platformosx-arm64rust_archaarch64-apple-darwinrust_arch_envAARCH64_APPLE_DARWINrust_default_ccarm64-apple-d_hf6c7d5e8
+      : CONFIG: osx_arm64_channel_targetsconda-forge_rust_devcross_target_platformosx-arm64rust_archaarch64-apple-darwinrust_arch_envAARCH64_APPLE_DARWINrust_default_ccarm64-apple-d_hf6c7d5e8
         UPLOAD_PACKAGES: 'True'
         VMIMAGE: macOS-15
+        build_workspace_dir: ~/miniforge3/conda-bld
         store_build_artifacts: false
-      ? osx_arm64_channel_targetsconda-forge_rust_devcross_target_platformwin-64rust_archx86_64-pc-windows-msvcrust_arch_envX86_64_PC_WINDOWS_MSVCrust_default_ccclang-clversion1.97.0
-      : CONFIG: osx_arm64_channel_targetsconda-forge_rust_devcross_target_platformwin-64rust_archx86_64-pc-windows-msvcrust_arch_envX86_64_PC_WINDOWS_MSVCrust_default_ccclang-clversion1.97.0
+        tools_install_dir: ~/miniforge3
+      ? osx_arm64_channel_targetsconda-forge_rust_devcross_target_platformwin-64rust_archx86_64-pc-windows-msvcrust_arch_envX86_64_PC_WINDOWS_MSVCrust_default_ccclang-clversion1.98.0
+      : CONFIG: osx_arm64_channel_targetsconda-forge_rust_devcross_target_platformwin-64rust_archx86_64-pc-windows-msvcrust_arch_envX86_64_PC_WINDOWS_MSVCrust_default_ccclang-clversion1.98.0
         UPLOAD_PACKAGES: 'True'
         VMIMAGE: macOS-15
+        build_workspace_dir: ~/miniforge3/conda-bld
         store_build_artifacts: false
+        tools_install_dir: ~/miniforge3
   timeoutInMinutes: 360
   variables: {}
 
   steps:
   # TODO: Fast finish on azure pipelines?
   - script: |
+      export MINIFORGE_HOME=$(tools_install_dir)
+      export CONDA_BLD_PATH=$(build_workspace_dir)
       export CI=azure
       export flow_run_id=azure_$(Build.BuildNumber).$(System.JobAttempt)
       export remote_url=$(Build.Repository.Uri)
